@@ -1,0 +1,161 @@
+@charset "UTF-8"
+
+/*
+-------------------------------------------
+Globala regler
+-------------------------------------------
+*/
+
+/* Ge innehållet lite marginal till kanterna */
+html {
+	margin: 2%;
+}
+
+/* Centrerad sida, med startvärde storlek och fonter beroende 
+på vad som fungerar på OS och läsare */
+body {
+	margin: auto;
+	max-width: 860px;
+	font-family: "Helvetica Neue", "Liberation Sans", Calibri, Arial, sans-serif;
+	font-size: 100%;
+ }
+header {
+	text-align: center;
+}
+
+/*
+-------------------------------------------
+Startsidans regler
+-------------------------------------------
+*/
+
+/* Flex och dess värden så menyer mm hamnar brevid varandra snyggt */
+.startpage {	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/* Flex till header, footer och section så de fyller sidans bredd 
+och hamnar brevid varandra */
+.startpage header,
+.startpage footer {
+	flex: 0 0 100%;
+}
+.startpage section {
+	flex: 0 0 22%;
+}
+
+/*
+-------------------------------------------
+Div regler
+-------------------------------------------
+*/
+
+/* Ger divven flex och centrering med automatisk radbyte */
+.hwrap {
+ 	display: flex;
+ 	flex-wrap: wrap;
+ 	align-items: center;
+ 	justify-content: center;
+ }
+
+ /* Sätter ett avstånd mellan rubrikbild och rubriktext */
+ .hwrap > a {
+ 	margin-right: 30px;
+ }
+
+/*
+-------------------------------------------
+Rubrik bild regler
+-------------------------------------------
+*/
+
+ /* Sätter storlek på rubrikbilden och rundad hörn */
+.startpage .logo {
+ 	border-radius: 30%;
+ 	width: 235px;
+ 	height: 160px;
+ }
+
+/*
+-------------------------------------------
+Rubrik regler
+-------------------------------------------
+*/
+
+/* Ger första bokstaven i "Katthemmet" annan färg */
+h1::first-Letter {
+	color: #b38600;
+}
+h1 {
+	font-family: "Merienda One", cursive;
+}
+
+.startpage h1 {
+	font-size: 500%;
+}
+
+/*
+-------------------------------------------
+Rubriks slogan regler
+-------------------------------------------
+*/
+
+/* Avstån marginaler och kantlinjer och dess färg */
+.tagline {
+	font-size: 120%;
+	padding: 0.5em;
+	border-top: 3px double #ffd966;
+	border-bottom: 3px double #ffd966;
+	margin: 1em 0;
+}
+
+/*
+-------------------------------------------
+Regler för meny
+-------------------------------------------
+*/
+
+/* Ger bubble runt menyn och rubriken en annan font plus en 
+extra standard kursiv font om inte den första fungerar */
+.menu > h2 {
+	margin-top: 0 0 1em;
+	padding: 2em 0;
+	background-color: #F5F5F5;
+	text-align: center;
+	box-shadow: inset 0 0 20px #ffc61a;
+	border-radius: 50%;
+	font-family: "Merienda One", cursive;
+}
+
+/* Tar bord underline från länk och ger text svart färg */
+.menu a:link,
+.menu a:visited {
+	text-decoration: none;
+	color: #000;
+}
+.menu a:focus, /* Tabba bland menyer */
+.menu a:hover { /* Annan färg när musen är över texten och ger underline samtidigt */
+	text-decoration: underline;
+	color: #A62F00;
+}
+.menu a:active { /* Ger annan färg och underline vid tryck */
+	text-decoration: underline;
+	color: #FF4900;
+}
+p {
+ 	text-align: center;
+}
+
+/*
+-------------------------------------------
+Footer regler
+-------------------------------------------
+*/
+
+ footer {
+	margin-top: 3em;
+	text-align: center;
+	color: #999;
+}
